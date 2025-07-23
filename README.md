@@ -23,6 +23,7 @@ JOIN airlines al
 ON f.airlineid=al.airlineid
 GROUP BY al.name;
 ```
+![](https://github.com/Arijeet226/SQL-project-4-23.07.2025/blob/ce3a0e87e0f30f791cd3557665b60ad205cff18b/graphics/TICKET_SOLD.png)
 ## Q3 LIST ALL FLIGHTS OPERATED BY INDIGO WITH AIRPORT NAMES ORIGIN AND DESTINATION
 ```sql
 SELECT f.flightid,a.name AS origin_airport,
@@ -79,6 +80,7 @@ JOIN passengers p ON t.passengerid = p.passengerid
 GROUP BY t.passengerid, p.name
 ORDER BY total_flights DESC;
 ```
+![](https://github.com/Arijeet226/SQL-project-4-23.07.2025/blob/ce3a0e87e0f30f791cd3557665b60ad205cff18b/graphics/TOTAL%20FLIGHTS.png)
 ## Q7 FIND FLIGHTS WITH THE HIGHEST PRICE TICKET SOLD FOR EACH ROUTE (origin->destination)
 ```sql
 SELECT 
@@ -101,6 +103,7 @@ JOIN airports a1 ON rt.origin = a1.airportid
 JOIN airports a2 ON rt.destination = a2.airportid
 WHERE rt.rnk = 1;
 ```
+![](https://github.com/Arijeet226/SQL-project-4-23.07.2025/blob/ce3a0e87e0f30f791cd3557665b60ad205cff18b/graphics/PRICE%20paid%20by%20ticket_id.png)
 ## Q8 FIND THE HIGHEST SPENDING PASSENGER IN EACH FREQUENT FLYER STATUS GROUP
 ```sql
 SELECT 
@@ -120,3 +123,4 @@ FROM (
 ) AS sub
 WHERE sub.rn = 1;
 ```
+![](https://github.com/Arijeet226/SQL-project-4-23.07.2025/blob/ce3a0e87e0f30f791cd3557665b60ad205cff18b/graphics/membership.png)
